@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ปริญญาบัตรจบการศึกษามหาวิทยาลัยเบงจันทร์</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    @font-face {
+      font-family: 'TH Sarabun New';
+      src: url('https://cdn.glitch.global/c6c462fe-a7f5-4a34-852e-bb8f5e09e65b/THSarabunNew%20Bold.ttf?v=1750750922169') format('truetype');
+    }
+
+    body {
+      font-family: "TH Sarabun New", sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #certificate {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+
+    .input-area {
+      margin: 20px auto;
+      max-width: 400px;
+      padding: 0 10px;
+    }
+
+    .input-area input,
+    .input-area select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-family: "TH Sarabun New", sans-serif;
+      font-size: 22px;
+      box-sizing: border-box;
+    }
+
+    .input-area button {
+      width: 48%;
+      padding: 10px;
+      font-size: 22px;
+      font-family: "TH Sarabun New", sans-serif;
+      margin: 5px 1%;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 500px) {
+      .input-area button {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>ปริญญาบัตรจบการศึกษามหาวิทยาลัยเบงจันทร์</h1>
+
+  <div class="input-area">
+    <input type="text" id="fullname" placeholder="คำนำหน้า ชื่อ นามสกุล">
+    <select id="degree">
+      <option value="ศิลปบัณฑิต (จิตรกรรม)">ศิลปบัณฑิต (จิตรกรรม)</option>
+      <option value="ศิลปบัณฑิต (ประติมากรรม)">ศิลปบัณฑิต (ประติมากรรม)</option>
+      <option value="ศิลปบัณฑิต (ศิลปะไทยและวัฒนธรรมสร้างสรรค์)">ศิลปบัณฑิต (ศิลปะไทยและวัฒนธรรมสร้างสรรค์)</option> 
+      <option value="ศิลปบัณฑิต (ศิลปะภาพพิมพ์)">ศิลปบัณฑิต (ศิลปะภาพพิมพ์)</option>
+      <option value="นิติศาสตรบัณฑิต">นิติศาสตรบัณฑิต</option>
+      <option value="ศิลปศาสตรบัณฑิต (ภาษาไทย)">ศิลปศาสตรบัณฑิต (ภาษาไทย)</option>
+      <option value="ศิลปศาสตรบัณฑิต (รัฐประศาสนศาสตร์)">ศิลปศาสตรบัณฑิต (รัฐประศาสนศาสตร์)</option>
+      <option value="ศิลปศาสตรบัณฑิต (พัฒนาสังคม)">ศิลปศาสตรบัณฑิต (พัฒนาสังคม)</option>
+      <option value="ศิลปศาสตรบัณฑิต (สังคมวิทยาและมานุษยวิทยา)">ศิลปศาสตรบัณฑิต (สังคมวิทยาและมานุษยวิทยา)</option>
+      <option value="ศิลปศาสตรบัณฑิต (ภาษาตะวันออก)">ศิลปศาสตรบัณฑิต (ภาษาตะวันออก)</option>
+      <option value="ศิลปศาสตรบัณฑิต (ภาษาตะวันตก)">ศิลปศาสตรบัณฑิต (ภาษาตะวันตก)</option>
+      <option value="ศิลปศาสตรบัณฑิต (ภาษาอังกฤษ)">ศิลปศาสตรบัณฑิต (ภาษาอังกฤษ)</option>
+      <option value="นิเทศศาสตรบัณฑิต (ภาพยนตร์)">นิเทศศาสตรบัณฑิต (ภาพยนตร์)</option>
+      <option value="นิเทศศาสตรบัณฑิต (ศิลปะการแสดง)">นิเทศศาสตรบัณฑิต (ศิลปะการแสดง)</option>
+      <option value="นิเทศศาสตรบัณฑิต (สื่อดิจิทัล)">นิเทศศาสตรบัณฑิต (สื่อดิจิทัล)</option>
+      <option value="บริหารธุรกิจบัณฑิต (การจัดการ)">นิเทศศาสตรบัณฑิต (การจัดการ)</option>
+      <option value="บริหารธุรกิจบัณฑิต (การตลาด)">นิเทศศาสตรบัณฑิต (การตลาด)</option>
+      <option value="บริหารธุรกิจบัณฑิต (การจัดการธุรกิจบริการ)">นิเทศศาสตรบัณฑิต (การจัดการธุรกิจบริการ)</option>
+      <option value="เกษตรศาสตรบัณฑิต (เศรษฐศาสตร์เกษตร)">เกษตรศาสตรบัณฑิต (เศรษฐศาสตร์เกษตร)</option>
+      <option value="เกษตรศาสตรบัณฑิต (เศรษฐศาสตร์เกษตรและธุรกิจเกษตร)">เกษตรศาสตรบัณฑิต (เศรษฐศาสตร์เกษตรและธุรกิจเกษตร)</option>
+      <option value="เกษตรศาสตรบัณฑิต (เกษตรศาสตร์)">เกษตรศาสตรบัณฑิต (เกษตรศาสตร์)</option>
+      <option value="เกษตรศาสตรบัณฑิต (สัตวศาสตร์)">เกษตรศาสตรบัณฑิต (สัตวศาสตร์)</option>
+      <option value="ดุริยางคศาสตรบัณฑิต (การแสดงดนตรี)">ดุริยางคศาสตรบัณฑิต (การแสดงดนตรี)</option>
+      <option value="ดุริยางคศาสตรบัณฑิต (ดนตรีแจ๊ส)">ดุริยางคศาสตรบัณฑิต (ดนตรีแจ๊ส)</option>
+      <option value="ดุริยางคศาสตรบัณฑิต (ดนตรีเชิงพาณิชย์)">ดุริยางคศาสตรบัณฑิต (ดนตรีเชิงพาณิชย์)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมโยธา)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมโยธา)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมไฟฟ้า)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมไฟฟ้า)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเครื่องกล)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเครื่องกล)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอุตสาหกรรม)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอุตสาหกรรม)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมคอมพิวเตอร์)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมคอมพิวเตอร์)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมสิ่งแวดล้อม)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมสิ่งแวดล้อม)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมพลังงาน)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมพลังงาน)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมโลจิสติกส์)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมโลจิสติกส์)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเคมี)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเคมี)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมความปลอดภัย)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมความปลอดภัย)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมชีวการแพทย์)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมชีวการแพทย์)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมวัสดุ)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมวัสดุ)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเกษตร)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเกษตร)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอาหาร)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอาหาร)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมพอลิเมอร์)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมพอลิเมอร์)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอิเล็กทรอนิกส์และโทรคมนาคม)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอิเล็กทรอนิกส์และโทรคมนาคม)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเหมืองแร่และปิโตรเลียม)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมเหมืองแร่และปิโตรเลียม)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมหุ่นยนต์และระบบอัตโนมัติ)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมหุ่นยนต์และระบบอัตโนมัติ)</option>
+      <option value="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมดนตรีและสื่อประสม)">วิศวกรรมศาสตรบัณฑิต (วิศวกรรมดนตรีและสื่อประสม)</option>
+      <option value="สถาปัตยกรรมศาสตรบัณฑิต (สถาปัตยกรรม)">สถาปัตยกรรมศาสตรบัณฑิต (สถาปัตยกรรม)</option>
+      <option value="สถาปัตยกรรมศาสตรบัณฑิต (ออกแบบภายใน)">สถาปัตยกรรมศาสตรบัณฑิต  (ออกแบบภายใน)</option>
+      <option value="สถาปัตยกรรมศาสตรบัณฑิต (ศิลปประยุกต์และออกแบบผลิตภัณฑ์)">สถาปัตยกรรมศาสตรบัณฑิต (ศิลปประยุกต์และออกแบบผลิตภัณฑ์)</option>
+      <option value="สถาปัตยกรรมศาสตรบัณฑิต (สถาปัตยกรรมผังเมือง)">สถาปัตยกรรมศาสตรบัณฑิต  (สถาปัตยกรรมผังเมือง)</option>
+      <option value="วิทยาศาสตรบัณฑิต (วิทยาศาสตร์เคมี)">วิทยาศาสตรบัณฑิต (วิทยาศาสตร์เคมี)</option>
+      <option value="วิทยาศาสตรบัณฑิต (วิทยาศาสตร์ชีววิทยา)">วิทยาศาสตรบัณฑิต (วิทยาศาสตร์ชีววิทยา)</option>
+      <option value="วิทยาศาสตรบัณฑิต (วิทยาศาสตร์ฟิสิกส์)">วิทยาศาสตรบัณฑิต (วิทยาศาสตร์ฟิสิกส์)</option>
+      <option value="วิทยาศาสตรบัณฑิต (วิทยาศาสตร์การกีฬา)">วิทยาศาสตรบัณฑิต (วิทยาศาสตร์การกีฬา)</option>
+      <option value="แพทยศาสตรบัณฑิต">แพทยศาสตรบัณฑิต</option>
+      <option value="ทันตแพทยศาสตรบัณฑิต">ทันตแพทยศาสตรบัณฑิต </option>
+      <option value="สัตวแพทยศาสตรบัณฑิต">สัตวแพทยศาสตรบัณฑิต  </option>
+      
+    </select>
+    <button onclick="generateCertificate()">สร้างเกียรติบัตร</button>
+    <button onclick="downloadCertificate()">ดาวน์โหลด</button>
+  </div>
+
+  <div id="certificate">
+    <canvas id="outputCanvas" width="1600" height="1130"></canvas>
+  </div>
+
+  <script>
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = "https://cdn.glitch.global/c6c462fe-a7f5-4a34-852e-bb8f5e09e65b/Purple%20Modern%20Event%20Completion%20Certificate.jpg?v=1750757623412";
+
+    function generateCertificate() {
+      const name = document.getElementById("fullname").value.trim();
+      const degree = document.getElementById("degree").value;
+      const canvas = document.getElementById("outputCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // โหลดภาพพื้นหลัง
+      img.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+        // ตั้งค่าฟอนต์
+        ctx.font = "80px 'TH Sarabun New'";
+        ctx.fillStyle = "#000";
+        ctx.textAlign = "center";
+
+        // ชื่อผู้รับ
+        ctx.fillText(name, canvas.width / 2, 550);
+
+        // ปริญญา
+        ctx.fillText(degree, canvas.width / 2, 780);
+      };
+
+      if (img.complete) {
+        img.onload();
+      }
+  
+    }
+
+    function downloadCertificate() {
+      const canvas = document.getElementById("outputCanvas");
+      const link = document.createElement('a');
+      link.download = 'certificate.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+</body>
+</html>
